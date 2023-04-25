@@ -3,7 +3,7 @@ const store = require('../db/store');
 
 // requesting the existing notes
 
-router.get('./notes', (req, res) => {
+router.get('/notes', (req, res) => {
     store
         .getNotes()
         .then(notes => {
@@ -16,7 +16,7 @@ router.get('./notes', (req, res) => {
 
 // posting note function route 
 
-router.post('./notes', (req, res) => {
+router.post('/notes', (req, res) => {
     console.log(req.body)
     store
         .addNote(req.body)
