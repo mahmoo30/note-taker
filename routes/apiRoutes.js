@@ -2,7 +2,6 @@ const router = require('express').Router();
 const store = require('../db/store');
 
 // requesting the existing notes
-
 router.get('/notes', (req, res) => {
     store
         .getNotes()
@@ -15,7 +14,6 @@ router.get('/notes', (req, res) => {
 })
 
 // posting note function route 
-
 router.post('/notes', (req, res) => {
     console.log(req.body)
     store
@@ -28,9 +26,7 @@ router.post('/notes', (req, res) => {
         })
 })
 
-
 // delete note function route
-
 router.delete('/notes/:id', (req, res) => {
     store
         .removeNote(req.params.id)
